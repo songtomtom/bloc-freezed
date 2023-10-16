@@ -18,7 +18,6 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$LoginEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginSubmitted,
@@ -26,7 +25,6 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? loginSubmitted,
@@ -34,7 +32,6 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginSubmitted,
@@ -43,7 +40,6 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(UsernameChanged value) usernameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
     required TResult Function(LoginSubmitted value) loginSubmitted,
@@ -51,7 +47,6 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UsernameChanged value)? usernameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
     TResult? Function(LoginSubmitted value)? loginSubmitted,
@@ -59,7 +54,6 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(UsernameChanged value)? usernameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     TResult Function(LoginSubmitted value)? loginSubmitted,
@@ -84,153 +78,6 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$UsernameChangedImplCopyWith<$Res> {
-  factory _$$UsernameChangedImplCopyWith(_$UsernameChangedImpl value,
-          $Res Function(_$UsernameChangedImpl) then) =
-      __$$UsernameChangedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String username});
-}
-
-/// @nodoc
-class __$$UsernameChangedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$UsernameChangedImpl>
-    implements _$$UsernameChangedImplCopyWith<$Res> {
-  __$$UsernameChangedImplCopyWithImpl(
-      _$UsernameChangedImpl _value, $Res Function(_$UsernameChangedImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? username = null,
-  }) {
-    return _then(_$UsernameChangedImpl(
-      null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UsernameChangedImpl implements UsernameChanged {
-  const _$UsernameChangedImpl(this.username);
-
-  @override
-  final String username;
-
-  @override
-  String toString() {
-    return 'LoginEvent.usernameChanged(username: $username)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UsernameChangedImpl &&
-            (identical(other.username, username) ||
-                other.username == username));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, username);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UsernameChangedImplCopyWith<_$UsernameChangedImpl> get copyWith =>
-      __$$UsernameChangedImplCopyWithImpl<_$UsernameChangedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
-    required TResult Function(String email) emailChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() loginSubmitted,
-  }) {
-    return usernameChanged(username);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
-    TResult? Function(String email)? emailChanged,
-    TResult? Function(String password)? passwordChanged,
-    TResult? Function()? loginSubmitted,
-  }) {
-    return usernameChanged?.call(username);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
-    TResult Function(String email)? emailChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? loginSubmitted,
-    required TResult orElse(),
-  }) {
-    if (usernameChanged != null) {
-      return usernameChanged(username);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UsernameChanged value) usernameChanged,
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(LoginSubmitted value) loginSubmitted,
-  }) {
-    return usernameChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UsernameChanged value)? usernameChanged,
-    TResult? Function(EmailChanged value)? emailChanged,
-    TResult? Function(PasswordChanged value)? passwordChanged,
-    TResult? Function(LoginSubmitted value)? loginSubmitted,
-  }) {
-    return usernameChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UsernameChanged value)? usernameChanged,
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(LoginSubmitted value)? loginSubmitted,
-    required TResult orElse(),
-  }) {
-    if (usernameChanged != null) {
-      return usernameChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UsernameChanged implements LoginEvent {
-  const factory UsernameChanged(final String username) = _$UsernameChangedImpl;
-
-  String get username;
-  @JsonKey(ignore: true)
-  _$$UsernameChangedImplCopyWith<_$UsernameChangedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -297,7 +144,6 @@ class _$EmailChangedImpl implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginSubmitted,
@@ -308,7 +154,6 @@ class _$EmailChangedImpl implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? loginSubmitted,
@@ -319,7 +164,6 @@ class _$EmailChangedImpl implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginSubmitted,
@@ -334,7 +178,6 @@ class _$EmailChangedImpl implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(UsernameChanged value) usernameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
     required TResult Function(LoginSubmitted value) loginSubmitted,
@@ -345,7 +188,6 @@ class _$EmailChangedImpl implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UsernameChanged value)? usernameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
     TResult? Function(LoginSubmitted value)? loginSubmitted,
@@ -356,7 +198,6 @@ class _$EmailChangedImpl implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(UsernameChanged value)? usernameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     TResult Function(LoginSubmitted value)? loginSubmitted,
@@ -444,7 +285,6 @@ class _$PasswordChangedImpl implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginSubmitted,
@@ -455,7 +295,6 @@ class _$PasswordChangedImpl implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? loginSubmitted,
@@ -466,7 +305,6 @@ class _$PasswordChangedImpl implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginSubmitted,
@@ -481,7 +319,6 @@ class _$PasswordChangedImpl implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(UsernameChanged value) usernameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
     required TResult Function(LoginSubmitted value) loginSubmitted,
@@ -492,7 +329,6 @@ class _$PasswordChangedImpl implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UsernameChanged value)? usernameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
     TResult? Function(LoginSubmitted value)? loginSubmitted,
@@ -503,7 +339,6 @@ class _$PasswordChangedImpl implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(UsernameChanged value)? usernameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     TResult Function(LoginSubmitted value)? loginSubmitted,
@@ -563,7 +398,6 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginSubmitted,
@@ -574,7 +408,6 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? loginSubmitted,
@@ -585,7 +418,6 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginSubmitted,
@@ -600,7 +432,6 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(UsernameChanged value) usernameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
     required TResult Function(LoginSubmitted value) loginSubmitted,
@@ -611,7 +442,6 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UsernameChanged value)? usernameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
     TResult? Function(LoginSubmitted value)? loginSubmitted,
@@ -622,7 +452,6 @@ class _$LoginSubmittedImpl implements LoginSubmitted {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(UsernameChanged value)? usernameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     TResult Function(LoginSubmitted value)? loginSubmitted,
